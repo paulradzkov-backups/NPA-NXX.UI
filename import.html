@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Import Rates / NPA-NXX template</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="stylesheet/less" type="text/css" href="bower_components/bootstrap/less/bootstrap.less" />
+		<script src="node_modules/less/dist/less-1.3.2.min.js"></script>
+		<!--link rel="stylesheet" href="css/bootstrap.min.css"-->
+		<link rel="stylesheet" href="css/template.css">
+		<script src="js/modernizr-2.6.2.min.js"></script>
+	</head>
+	<body>
+		<div class="container-fullwidth">
+			<header class="row page-header" role="banner">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="app-logo">
+						<a href="index.html" class="app-name">CRP Dashboard</a>
+						<span class="app-version">v2.0.1.4518 DB:cardv WEB:som-npa3</span>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<div class="user-panel row">
+						<div class="col-md-10 col-sm-8 col-xs-9">
+							<div class="layout-table">
+								<div class="layout-row">
+									<span class="layout-cell user-panel-label user-panel-greeting">Welcome</span>
+									<span class="layout-cell user-panel-value user-panel-username">Inna Golovchtchikova</span>
+								</div>
+								<div class="layout-row">
+									<span class="layout-cell user-panel-label">Access:</span>
+									<span class="layout-cell user-panel-value">Administrator</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-4 col-xs-3">
+							<button class="btn btn-default">Logout</button>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="row page-body">
+				<aside class="col-lg-2 col-md-2 col-sm-2 col-xs-12" role="complementary">
+					<nav class="main-nav" role="navigation">
+						<ul class="nav text-center">
+							<li>
+								<a href="index.html">
+									<span class="nav-icon nav-icon-client"></span>
+									<span class="nav-text">Select Client</span>
+								</a>
+							</li>
+							<li class="active">
+								<a href="import.html">
+									<span class="nav-icon nav-icon-import"></span>
+									<span class="nav-text">Import</span>
+								</a>
+							</li>
+							<li>
+								<a href="export.html">
+									<span class="nav-icon nav-icon-export"></span>
+									<span class="nav-text">Export</span>
+								</a>
+							</li>
+							<li>
+								<a href="history.html">
+									<span class="nav-icon nav-icon-history"></span>
+									<span class="nav-text">History</span>
+								</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="help.html">
+									<span class="nav-icon nav-icon-help"></span>
+									<span class="nav-text">Help</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</aside>
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12" role="main">
+					<div class="main-content-wrapper">
+						<div class="page-title-group">
+							<p class="page-breadcrumbs">ABC Telecom / NPA-NXX</p>
+							<h1 class="page-title">Import Rates</h1>
+						</div>
+						<div class="fullwidth bg-panel">
+							<p>Specify .CSV rate files, default rates, Toll Free and Directory Assistance Rates</p>
+						</div>
+						<h3>Import and Apply</h3>
+						<form class="form-horizontal" role="form">
+							<div class="form-group hidden-xs">
+								<label for="interstateRateFile" class="col-lg-3 col-sm-4 col-lg-offset-2 col-sm-offset-3">Interstate Rate</label>
+								<label for="intrastateRateFile" class="col-lg-3 col-sm-4">Intrastate Rate</label>
+							</div>
+							<div class="form-group">
+								<label for="interstateRateFile" class="col-lg-2 col-sm-3 control-label hidden-xs">.CSV rate files: <span class="required">*</span></label>
+								<div class="col-lg-3 col-sm-4">
+									<label for="interstateRateFile" class="control-label visible-xs">Interstate Rate .CSV file: <span class="required">*</span></label>
+									<input type="file" id="interstateRateFile" name="interstateRateFile">
+								</div>
+								<div class="col-lg-3 col-sm-4">
+									<label for="intrastateRateFile" class="control-label visible-xs">Intrastate Rate .CSV file: <span class="required">*</span></label>
+									<input type="file" id="intrastateRateFile" name="intrastateRateFile">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="interstateRateFile" class="col-lg-2 col-sm-3 control-label hidden-xs">Default: <span class="required">*</span></label>
+								<div class="col-lg-3 col-sm-4">
+									<label for="interstateRateDefault" class="control-label visible-xs">Intrastate Rate Default: <span class="required">*</span></label>
+									<input type="text" id="interstateRateDefault" name="interstateRateDefault" class="form-control" placeholder="Enter an Interstate Rate">
+								</div>
+								<div class="col-lg-3 col-sm-4">
+									<label for="intrastateRateDefault" class="control-label visible-xs">Intrastate Rate Default: <span class="required">*</span></label>
+									<input type="text" id="intrastateRateDefault" name="intrastateRateDefault" class="form-control" placeholder="Enter an Intrastate Rate">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-lg-3 col-sm-4 col-lg-offset-2 col-sm-offset-3">
+									<hr>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="tollFreeRate" class="col-lg-2 col-sm-3 control-label">Toll Free Rate: <span class="required">*</span></label>
+								<div class="col-lg-3 col-sm-4">
+									<input type="text" id="tollFreeRate" name="tollFreeRate" class="form-control" placeholder="Enter an Toll Free Rate">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="directoryAssistanceRate" class="col-lg-2 col-sm-3 control-label">Directory Assistance Rate: <span class="required">*</span></label>
+								<div class="col-lg-3 col-sm-4">
+									<input type="text" id="directoryAssistanceRate" name="directoryAssistanceRate" class="form-control" placeholder="Enter Directory Assistance Rate">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-lg-3 col-sm-4 col-lg-offset-2 col-sm-offset-3">
+									<hr>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="effectiveDate" class="col-lg-2 col-sm-3 control-label">Effective Date: <span class="required">*</span></label>
+								<div class="col-lg-3 col-sm-4">
+									<input type="date" id="effectiveDate" name="effectiveDate" class="form-control" placeholder="Enter Date...">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-lg-3 col-sm-4 col-sm-offset-3 col-lg-offset-2 ">
+									<button type="submit" class="btn btn-default">Import</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
