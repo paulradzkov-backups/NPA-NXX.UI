@@ -8,9 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-		<link rel="stylesheet/less" type="text/css" href="bower_components/bootstrap/less/bootstrap.less" />
-		<script src="node_modules/less/dist/less-1.3.2.min.js"></script>
-		<!--link rel="stylesheet" href="css/bootstrap.min.css"-->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/template.css">
 		<script src="js/modernizr-2.6.2.min.js"></script>
 	</head>
@@ -19,7 +17,7 @@
 			<header class="row page-header" role="banner">
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 					<div class="app-logo">
-						<a href="index.html" class="app-name">CRP Dashboard</a>
+						<a href="index.html" class="app-name">NPA-NXX Dashboard</a>
 						<span class="app-version">v2.0.1.4518 DB:cardv WEB:som-npa3</span>
 					</div>
 				</div>
@@ -43,70 +41,245 @@
 					</div>
 				</div>
 			</header>
-			<div class="row page-body">
-				<aside class="col-lg-2 col-md-2 col-sm-2 col-xs-12" role="complementary">
-					<nav class="main-nav" role="navigation">
-						<ul class="nav text-center">
-							<li class="active">
-								<a href="index.html">
-									<span class="nav-icon nav-icon-client"></span>
-									<span class="nav-text">Select Client</span>
-								</a>
-							</li>
-							<li>
-								<a href="import.html">
-									<span class="nav-icon nav-icon-import"></span>
-									<span class="nav-text">Import</span>
-								</a>
-							</li>
-							<li class="disabled">
-								<a href="export.html">
-									<span class="nav-icon nav-icon-export"></span>
-									<span class="nav-text">Export</span>
-								</a>
-							</li>
-							<li class="disabled">
-								<a href="history.html">
-									<span class="nav-icon nav-icon-history"></span>
-									<span class="nav-text">History</span>
-								</a>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<a href="help.html">
-									<span class="nav-icon nav-icon-help"></span>
-									<span class="nav-text">Help</span>
-								</a>
-							</li>
-						</ul>
-					</nav>
-				</aside>
-				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12" role="main">
-					<div class="main-content-wrapper">
-						<div class="page-title-group">
-							<h1 class="page-title">Select Client</h1>
-						</div>
-						<div class="fullwidth bg-panel">
-							<p>Choose an account to work</p>
-						</div>
-						<form class="form-horizontal" role="form">
-							<div class="form-group">
-								<label for="account" class="col-sm-3 control-label">Select Account:</label>
-								<div class="col-sm-6">
-									<input type="text" class="form-control" name="account" id="account" placeholder="Type to find customer">
-								</div>
-							</div>
-						</form>
-						<h3>Account Details</h3>
-						<div class="grid-view-temp">
-							grid view
+			<div class="page-body" role="main">
+				<div class="main-content-wrapper">
+					<div class="page-title-group row">
+						<nav class="nav-aside col-lg-1 col-lg-push-11 col-xs-2 col-xs-push-10">
+							<a href="#" data-toggle="tooltip" title="Help" data-placement="left">
+								<span class="nav-icon nav-icon-help">Help</span>
+							</a>
+						</nav>
+						<div class="select-client col-lg-11 col-lg-pull-1 col-xs-10 col-xs-pull-2">
+							<form class="form-inline" role="form">
+								<label for="account" class="">Select Account:</label>
+								<input type="text" class="form-control" style="max-width:300px" name="account" id="account" placeholder="Type to find customer">
+							</form>
 						</div>
 					</div>
+					<div class="row client-info">
+						<h1 class="page-title">ABC Telecom <small>/ NPA-NXXb</small> <span class="btn-group"><button class="btn btn-default btn-xs collapsed" data-toggle="collapse" href="#accDetails"><span class="txt-collapsed">Show</span><span class="txt-expanded">Hide</span> Account Details</button></span></h1>
+						<div class="client-info-results">
+							<div class="show-more-less panel-collapse collapse" id="accDetails">
+								<table class="account-details-table table table-bordered table-hover table-condensed table-striped">
+									<tr>
+										<th>Account ID</th>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th>Account Name</th>
+										<td>ABC Telecom</td>
+									</tr>
+									<tr>
+										<th>Offer Type</th>
+										<td>NPA-NXXb</td>
+									</tr>
+									<tr>
+										<th>Notification Format</th>
+										<td>-</td>
+									</tr>
+									<tr>
+										<th>Cost Basis</th>
+										<td>USA-Plus</td>
+									</tr>
+									<tr>
+										<th>Initial Billing Increment</th>
+										<td>6</td>
+									</tr>
+									<tr>
+										<th>Subsequent Billing Increment</th>
+										<td>6</td>
+									</tr>
+									<tr>
+										<th>Account Manager</th>
+										<td>Elliot Pressman</td>
+									</tr>
+									<tr>
+										<th>Sell Contact</th>
+										<td>John Smith</td>
+									</tr>
+									<tr>
+										<th>Sell Account Email Address</th>
+										<td>John.Smith@abctelecom.com</td>
+									</tr>
+									<tr>
+										<th>Rate Notification Email Address</th>
+										<td>rates2abctelecom.com</td>
+									</tr>
+									<tr>
+										<th>Decrease Lead Time</th>
+										<td>1</td>
+									</tr>
+									<tr>
+										<th>Increase Lead Time</th>
+										<td>7</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#import" data-toggle="tab">Import Rates</a></li>
+						<li><a href="#export" data-toggle="tab">Export Rates</a></li>
+						<li><a href="#history" data-toggle="tab">History</a></li>
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane fade in active" id="import">
+
+
+							<!-- import tab content -->
+							<h3>Last 3 Imports</h3>
+							<div class="grid-view-temp">
+								grid view
+							</div>
+
+							<div class="bg-panel">
+								<p>Specify .CSV rate files, default rates, Toll Free and Directory Assistance Rates</p>
+							</div>
+							<h3>Import and Apply</h3>
+							<form class="form-horizontal" role="form">
+								<div class="form-group hidden-xs">
+									<label for="interstateRateFile" class="col-lg-3 col-sm-4 col-lg-offset-2 col-sm-offset-3">Interstate Rate</label>
+									<label for="intrastateRateFile" class="col-lg-3 col-sm-4">Intrastate Rate</label>
+								</div>
+								<div class="form-group">
+									<label for="interstateRateFile" class="col-lg-2 col-sm-3 control-label hidden-xs">.CSV rate files: <span class="required">*</span></label>
+									<div class="col-lg-3 col-sm-4">
+										<label for="interstateRateFile" class="control-label visible-xs">Interstate Rate .CSV file: <span class="required">*</span></label>
+										<input type="file" id="interstateRateFile" name="interstateRateFile">
+									</div>
+									<div class="col-lg-3 col-sm-4">
+										<label for="intrastateRateFile" class="control-label visible-xs">Intrastate Rate .CSV file: <span class="required">*</span></label>
+										<input type="file" id="intrastateRateFile" name="intrastateRateFile">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="interstateRateDefault" class="col-lg-2 col-sm-3 control-label hidden-xs">Default: <span class="required">*</span></label>
+									<div class="col-lg-3 col-sm-4">
+										<label for="interstateRateDefault" class="control-label visible-xs">Intrastate Rate Default: <span class="required">*</span></label>
+										<input type="text" id="interstateRateDefault" name="interstateRateDefault" class="form-control" placeholder="Enter an Interstate Rate">
+									</div>
+									<div class="col-lg-3 col-sm-4">
+										<label for="intrastateRateDefault" class="control-label visible-xs">Intrastate Rate Default: <span class="required">*</span></label>
+										<input type="text" id="intrastateRateDefault" name="intrastateRateDefault" class="form-control" placeholder="Enter an Intrastate Rate">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-lg-3 col-sm-4 col-lg-offset-2 col-sm-offset-3">
+										<hr>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="tollFreeRate" class="col-lg-2 col-sm-3 control-label">Toll Free Rate: <span class="required">*</span></label>
+									<div class="col-lg-3 col-sm-4">
+										<input type="text" id="tollFreeRate" name="tollFreeRate" class="form-control" placeholder="Enter an Toll Free Rate">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="directoryAssistanceRate" class="col-lg-2 col-sm-3 control-label">Directory Assistance Rate: <span class="required">*</span></label>
+									<div class="col-lg-3 col-sm-4">
+										<input type="text" id="directoryAssistanceRate" name="directoryAssistanceRate" class="form-control" placeholder="Enter Directory Assistance Rate">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-lg-3 col-sm-4 col-lg-offset-2 col-sm-offset-3">
+										<hr>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="effectiveDate" class="col-lg-2 col-sm-3 control-label">Effective Date: <span class="required">*</span></label>
+									<div class="col-lg-3 col-sm-4">
+										<input type="date" id="effectiveDate" name="effectiveDate" class="form-control" placeholder="Enter Date...">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-lg-3 col-sm-4 col-sm-offset-3 col-lg-offset-2 ">
+										<button type="submit" class="btn btn-default">Import</button>
+									</div>
+								</div>
+							</form>
+							<!-- import tab content end-->
+
+
+						</div>
+						<div class="tab-pane fade" id="export">
+
+
+							<!-- export tab content -->
+							<h3>Export as .CSV</h3>
+							<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label for="date" class="col-lg-2 col-sm-3 control-label">Date: <span class="required">*</span></label>
+									<div class="col-lg-3 col-sm-4">
+										<input type="date" id="date" name="date" class="form-control" placeholder="Enter Date...">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="exportFormat" class="col-lg-2 col-sm-3 control-label">Export Format: <span class="required">*</span></label>
+									<div class="col-lg-3 col-sm-4">
+										<select name="exportFormat" id="exportFormat" class="form-control" placeholder="Select a Format">
+											<option value="" selected disabled>Select a Format</option>
+											<option value="csv">In 2 files</option>
+											<option value="xml">Sorted by row</option>
+											<option value="xml">Side-by-side in collumns</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-lg-3 col-sm-4 col-sm-offset-3 col-lg-offset-2">
+										<div class="checkbox">
+											<label>
+												<input type="checkbox"> Interstate
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-lg-3 col-sm-4 col-sm-offset-3 col-lg-offset-2">
+										<div class="checkbox">
+											<label>
+												<input type="checkbox"> Intrastate
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-lg-3 col-sm-4 col-sm-offset-3 col-lg-offset-2 ">
+										<button type="submit" class="btn btn-default">Run and Export as .CSV</button>
+									</div>
+								</div>
+							</form>
+							<!-- export tab content end-->
+
+
+						</div>
+						<div class="tab-pane fade" id="history">
+
+
+							<!-- history tab content -->
+							<div class="bg-panel">
+								<p>History of rates of selected customer</p>
+							</div>
+							<h3>Account Details</h3>
+							<div class="grid-view-temp">
+								grid view
+							</div>
+							<!-- history tab content end-->
+
+
+						</div>
+					</div>
+					<!-- Tab panes end -->
 				</div>
 			</div>
 		</div>
 
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script>
+			$(".nav-aside a").tooltip();
+		</script>
 	</body>
 </html>
