@@ -54,14 +54,14 @@
 								<label for="account" class="">Select Account:</label>
 								<span class="input-group">
 									<input type="text" class="form-control" style="max-width:300px" name="account" id="account" placeholder="Type to find customer">
-									<span class="input-group-btn"><button class="btn btn-default" type="button"><span class="caret"></span></button></span>
+									<span class="input-group-btn"><button class="btn btn-default" type="button"><span class="spinner"><i class="glyphicon glyphicon-refresh"></i></span><span class="caret"></span></button></span>
 								</span>
 								
 							</form>
 						</div>
 					</div>
 					<div class="row client-info">
-						<h1 class="page-title">ABC Telecom <small>/ NPA-NXXb</small> <span class="btn-group"><button class="btn btn-default btn-xs collapsed" data-toggle="collapse" href="#accDetails"><span class="txt-collapsed">Show</span><span class="txt-expanded">Hide</span> Account Details</button></span></h1>
+						<h1 class="page-title"><span class="client-name">ABC Telecom</span> <small>/ <span class="client-type">NPA-NXXb</span></small> <span class="btn-group"><button class="btn btn-default btn-xs collapsed" data-toggle="collapse" href="#accDetails"><span class="txt-collapsed">Show</span><span class="txt-expanded">Hide</span> Account Details</button></span></h1>
 						<div class="client-info-results">
 							<div class="show-more-less panel-collapse collapse" id="accDetails">
 								<table class="account-details-table table table-bordered table-hover table-condensed table-striped">
@@ -284,6 +284,13 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script>
 			$(".nav-aside a").tooltip();
+
+
+			/* this is demo script, not for production */
+			$(".select-client .btn").click(function () {
+				$(this).toggleClass('in-progress');
+			})
+			/* this is demo script, not for production end */
 		</script>
 	</body>
 </html>

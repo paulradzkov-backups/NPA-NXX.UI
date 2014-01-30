@@ -218,6 +218,47 @@ body {
 /* form layout override end */
 
 
+/* in button spinner */
+.spinner {
+	display: none;
+	-webkit-animation: spinner 1s linear infinite;
+	        animation: spinner 1s linear infinite;
+}
+.in-progress .spinner {
+	display: block;
+}
+.select-client .caret {
+	margin-left: 2px;
+	margin-right: 2px;
+}
+.select-client .in-progress .caret {
+	display: none;
+}
+
+@-webkit-keyframes spinner {
+	from { 
+        -webkit-transform: rotate(0deg); 
+                transform: rotate(0deg);
+	 }
+	to { 
+        -webkit-transform: rotate(359deg); 
+                transform: rotate(359deg);
+	 }
+}
+
+
+@keyframes spinner {
+	from { 
+        -webkit-transform: rotate(0deg); 
+                transform: rotate(0deg);
+	 }
+	to { 
+        -webkit-transform: rotate(359deg); 
+                transform: rotate(359deg);
+	 }
+}
+/* in button spinner end */
+
 /* temporary */
 .grid-view-temp {
 	background: #eee;
