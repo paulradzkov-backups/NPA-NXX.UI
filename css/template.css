@@ -196,6 +196,25 @@ body {
 [data-toggle="collapse"].collapsed .txt-expanded {
 	display: none;
 }
+.select-client .input-group {
+	display: inline-table;
+	width: 1%;
+}
+.select-client .input-group .form-control {
+	width: 300px;
+}
+.ui-menu-item:hover {
+    background:#edf3f4;
+    margin: 0 -10px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.ui-menu-item a {
+    display:block;
+    padding-top:3px;
+    padding-bottom:3px;
+    text-decoration:none;
+}
 /* form layout override end */
 
 
