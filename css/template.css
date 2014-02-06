@@ -259,6 +259,53 @@ body {
 }
 /* in button spinner end */
 
+/* app log and progress bar */
+.app-busy {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+	background-color: rgba(255,255,255,0.9);
+}
+.app-busy .progress {
+	margin-bottom: 0;
+}
+.progress-header {
+	padding: 20px 2em;
+	height: 73px;
+}
+.progress-header *:first-child {
+	margin: 0;
+}
+.progress-message-area {
+	position: absolute;
+	top: 90px;
+	bottom: 100px;
+	left: 0;
+	right: 0;
+	margin: 0 2em;
+	padding: 20px 2em;
+	font-family: Consolas, "Liberation Mono", Courier, monospace;
+	white-space: pre;
+	overflow: auto;
+	border: 1px solid #DDD;
+	background: #FFF;
+}
+.progress-actions {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100px;
+	padding: 20px 2em;
+}
+/* app log and progress bar end */
+
+
 /* temporary */
 .grid-view-temp {
 	background: #eee;

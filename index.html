@@ -200,7 +200,7 @@
 								</div>
 								<div class="form-group">
 									<div class="col-lg-3 col-sm-4 col-sm-offset-3 col-lg-offset-2 ">
-										<button type="submit" class="btn btn-default">Import</button>
+										<button type="submit" class="btn btn-default" id="import-button">Import</button>
 									</div>
 								</div>
 							</form>
@@ -251,7 +251,7 @@
 								</div>
 								<div class="form-group">
 									<div class="col-lg-3 col-sm-4 col-sm-offset-3 col-lg-offset-2 ">
-										<button type="submit" class="btn btn-default">Run and Export as .CSV</button>
+										<button type="submit" class="btn btn-default" id="export-button">Run and Export as .CSV</button>
 									</div>
 								</div>
 							</form>
@@ -280,6 +280,72 @@
 			</div>
 		</div>
 
+		<div class="app-busy" style="display:none">
+			<div class="progress progress-striped active">
+				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+			    	<span class="sr-only">60% Complete</span>
+				</div>
+			</div>
+			<div class="progress-header">
+				<h2 id="process-title">Importing...</h2>
+			</div>
+			<div class="progress-message-area" id="message-area">
+d:\GitHub\paulradzkov.com>docpad run
+info: Welcome to DocPad v6.60.3 (local installation: d:\GitHub\paulradzkov.com\n
+ode_modules\docpad)
+info: Contribute: http://docpad.org/docs/contribute
+info: Plugins: cleanurls, coffeescript, eco, gist, highlightjs, less, livereload
+, marked, navlinks, partials, sitemap, stylus, tagcloud, tags, text
+info: Environment: development
+info: DocPad listening to http://0.0.0.0:9778/ on directory d:\GitHub\paulradzko
+v.com\out
+info: LiveReload listening to new socket on channel /docpad-livereload
+info: Generating...
+notice: There's a new version of DocPad available!
+  Run `docpad upgrade; docpad update` to update your local installation: v6.60.3
+ to v6.63.3
+  For more information, visit: http://docpad.org/upgrade
+info: Created tag page for css at tags/css.html.eco
+info: Created tag page for typography at tags/typography.html.eco
+info: Created tag page for html at tags/html.html.eco
+info: Created tag page for usability at tags/usability.html.eco
+info: Created tag page for svg at tags/svg.html.eco
+info: Created tag page for IE at tags/ie.html.eco
+info: Created tag page for Chrome at tags/chrome.html.eco
+info: Created tag page for bug at tags/bug.html.eco
+info: Created tag page for tools at tags/tools.html.eco
+info: Created tag page for webkit at tags/webkit.html.eco
+info: Created tag page for photoshop at tags/photoshop.html.eco
+info: Created tag page for progressive enhancement at tags/progressive-enhanceme
+nt.html.eco
+info: Created tag page for responsive at tags/responsive.html.eco
+info: Adding navlinks for collection:  articles
+info: tagcloud: maxCount=13
+info: tagcloud: tag=Chrome, count=3, weight=0.42831734103139474
+info: tagcloud: tag=IE, count=1, weight=0
+info: tagcloud: tag=bug, count=1, weight=0
+info: tagcloud: tag=css, count=13, weight=1
+info: tagcloud: tag=html, count=1, weight=0
+info: tagcloud: tag=photoshop, count=2, weight=0.27023815442731974
+info: tagcloud: tag=progressive enhancement, count=1, weight=0
+info: tagcloud: tag=responsive, count=2, weight=0.27023815442731974
+info: tagcloud: tag=svg, count=2, weight=0.27023815442731974
+info: tagcloud: tag=tools, count=1, weight=0
+info: tagcloud: tag=typography, count=3, weight=0.42831734103139474
+info: tagcloud: tag=usability, count=1, weight=0
+info: tagcloud: tag=webkit, count=1, weight=0
+info: Dumped 265 files to the database cache
+info: Generated 257/265 files in 60.097 seconds
+info: Watching setup starting...
+info: Watching setup
+info: The action completed successfully
+			</div>
+			<div class="progress-actions">
+				<button class="btn" id="cancel-process">Cancel</button> 
+				<button class="btn">Save Log as File</button> 
+			</div>
+		</div>
+
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script>
@@ -290,7 +356,25 @@
 			$(".select-client .btn").click(function () {
 				$(this).toggleClass('in-progress');
 			})
-			/* this is demo script, not for production end */
+
+			var $appProgress = $(".app-busy");
+			var $processTitle = $("#process-title");
+
+			$("#cancel-process").on("click", function(event){
+				event.preventDefault();
+				$appProgress.hide();
+			});
+			$("#import-button").on("click", function(event){
+				event.preventDefault();
+				$processTitle.text("Importing...")
+				$appProgress.show();
+			});
+			$("#export-button").on("click", function(event){
+				$processTitle.text("Exporting...")
+				event.preventDefault();
+				$appProgress.show();
+			});
+			/* this is demo script, not for production /end */
 		</script>
 	</body>
 </html>
